@@ -14,9 +14,9 @@
         {{#unless this.devoured}}
         <li class="list-group-item">
           {{burger_name}}
-          <button data-id= {{id}} type="button" class="btn btn-outline-danger">Devour it!</button>
+          <button id={{id}} type="button" class="btn btn-outline-danger devourBtn">Devour it!</button>
         </li>
-        
+
         {{/unless}}
         {{/each}}
       </ul>
@@ -26,7 +26,8 @@
       <form action="/api/burger" method="post">
         <div class="form-group">
           <label for="burgerName">Your burger</label>
-          <input name="burgerName" type="text" class="form-control" id="burgerName" placeholder="Please enter your favorite burger">
+          <input name="burgerName" type="text" class="form-control" id="burgerName"
+            placeholder="Please enter your favorite burger" required>
           <button type="submit" class="btn btn-primary mb-2">Submit</button>
         </div>
       </form>
@@ -45,3 +46,12 @@
     </div>
   </div>
 </div>
+<script>
+  $("button").click(function (event) {
+    const id = event.target.id;
+    $.ajax({
+      url: `/api/burger/${id}`,
+      method: "PUT"
+    }).then(location.reload())
+  })
+</script>

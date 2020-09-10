@@ -7,13 +7,11 @@ const burger = {
     },
 
     insertOne: function(burgerName,cb){
-        orm.insertOne( burgerName,cb);
+        orm.insertOne(burgerName,cb);
     },
 
-    updateOne : function(id){
-        orm.updateOne(id, function(res) {
-            console.log(res);
-          });
+    updateOne : function(id,cb){
+        orm.updateOne(id,cb);
     }
 }
 
