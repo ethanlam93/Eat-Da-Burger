@@ -1,16 +1,18 @@
 .jumbotron {
     background-color: rgb(249, 163, 106);
-  }
-  ul {
+}
+
+ul {
     text-align: center;
     padding: 0;
-   }
-   
-   li {
-     display: inline-block;
-     margin: 0 10px;
-   }
+}
 
-   @media (min-width: 576px){
-.jumbotron {
-    padding: 1rem 1rem;}
+li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+@media (min-width: 576px) {
+    .jumbotron {
+        padding: 1rem 1rem;
+    }}
