@@ -1,6 +1,6 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Eat-Da-Burger</h1>
+    <h1 class="display-10">Eat-Da-Burger</h1>
     <image src="assets/images/burger.png" alt="A burger" width="200" height="200">
   </div>
 </div>
@@ -8,22 +8,32 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <ul>Burger list
+      <div>Burger list</div>
+      <ul class="list-group list-group-flush">
         {{#each burger}}
         {{#unless this.devoured}}
-        <li>
+        <li class="list-group-item">
           {{burger_name}}
+          <button data-id= {{id}} type="button" class="btn btn-outline-danger">Devour it!</button>
         </li>
+        
         {{/unless}}
         {{/each}}
       </ul>
 
     </div>
     <div class="col">
-      To be coded
+      <form action="/api/burger" method="post">
+        <div class="form-group">
+          <label for="burgerName">Your burger</label>
+          <input name="burgerName" type="text" class="form-control" id="burgerName" placeholder="Please enter your favorite burger">
+          <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </div>
+      </form>
     </div>
     <div class="col">
-      <ul>Devoured
+      <div>Devoured</div>
+      <ul>
         {{#each burger}}
         {{#if this.devoured}}
         <li>

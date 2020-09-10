@@ -6,10 +6,8 @@ const burger = {
       orm.selectAll("burgers", cb);
     },
 
-    insertOne: function(burgerName){
-        orm.insertOne( burgerName, function(res) {
-            console.log(res);
-          });
+    insertOne: function(burgerName,cb){
+        orm.insertOne( burgerName,cb);
     },
 
     updateOne : function(id){
