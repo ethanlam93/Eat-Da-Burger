@@ -2,10 +2,8 @@
 const orm = require("../config/orm.js")
 
 const burger = {
-    selectAll: function() {
-      orm.selectAll("burgers", function(res) {
-        console.log(res);
-      });
+    selectAll: function(cb) {
+      orm.selectAll("burgers", cb);
     },
 
     insertOne: function(burgerName){
@@ -19,7 +17,6 @@ const burger = {
             console.log(res);
           });
     }
-
 }
 
 module.exports = burger;
