@@ -1,0 +1,37 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Eat-Da-Burger</h1>
+    <image src="assets/images/burger.png" alt="A burger" width="200" height="200">
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <ul>Burger list
+        {{#each burger}}
+        {{#unless this.devoured}}
+        <li>
+          {{burger_name}}
+        </li>
+        {{/unless}}
+        {{/each}}
+      </ul>
+
+    </div>
+    <div class="col">
+      To be coded
+    </div>
+    <div class="col">
+      <ul>Devoured
+        {{#each burger}}
+        {{#if this.devoured}}
+        <li>
+          {{burger_name}}
+        </li>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
