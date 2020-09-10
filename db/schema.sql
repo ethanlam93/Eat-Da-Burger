@@ -7,7 +7,10 @@ CREATE TABLE burgers (
   id INT NOT NULL AUTO_INCREMENT,
   burger_name VARCHAR(100) NOT NULL,
   devoured BOOLEAN NOT NULL,
-  PRIMARY KEY (position)
+  createdAt TIMESTAMP NOT NULL,
+  PRIMARY KEY (id)
 );
+
+
 
 SELECT * FROM burgers_db;
