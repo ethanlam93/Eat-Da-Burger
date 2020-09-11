@@ -71,10 +71,10 @@ All the recommended files and directories from the steps above should look like 
 no installation needed
 
 ## Screenshot
+<img width="1207" alt="Screen Shot 2020-09-10 at 10 12 29 AM" src="https://user-images.githubusercontent.com/64672854/92977564-51374780-f45b-11ea-9574-0a405b045792.png">
 
 ## Deployment
-
-
+https://shrouded-fjord-36704.herokuapp.com/
 
 
 
